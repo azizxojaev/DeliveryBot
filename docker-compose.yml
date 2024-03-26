@@ -1,0 +1,13 @@
+version: '3'
+
+
+services:
+  bot:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    command: >
+      bash -c "python3 bot.py"
+    volumes:
+      - .:/delivery_bot
